@@ -1,0 +1,279 @@
+
+
+<div class="container" style="padding-top: 20px;">
+  <div class="pull-left">
+    <ul class="slides">
+      <input type="radio" name="radio-btn" id="img-1" checked />
+      <li class="slide-container">
+        <div class="slide">
+          <%= image_tag "slider/1.jpg"%>
+        </div>
+        <div class="nav">
+          <label for="img-4" class="prev">&#x2039;</label>
+          <label for="img-2" class="next">&#x203a;</label>
+        </div>
+      </li>
+
+      <input type="radio" name="radio-btn" id="img-2" />
+      <li class="slide-container">
+        <div class="slide">
+          <%= image_tag "slider/3.jpg"%>
+        </div>
+        <div class="nav">
+          <label for="img-1" class="prev">&#x2039;</label>
+          <label for="img-3" class="next">&#x203a;</label>
+        </div>
+      </li>
+
+      <input type="radio" name="radio-btn" id="img-3" />
+      <li class="slide-container">
+        <div class="slide">
+          <%= image_tag "slider/2.jpg"%>
+        </div>
+        <div class="nav">
+          <label for="img-2" class="prev">&#x2039;</label>
+          <label for="img-4" class="next">&#x203a;</label>
+        </div>
+      </li>
+      <input type="radio" name="radio-btn" id="img-4" />
+      <li class="slide-container">
+        <div class="slide">
+          <%= image_tag "slider/14.jpg"%>
+        </div>
+        <div class="nav">
+          <label for="img-3" class="prev">&#x2039;</label>
+          <label for="img-1" class="next">&#x203a;</label>
+        </div>
+      </li>
+      <li class="nav-dots">
+        <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+        <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+        <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+        <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+  </li>
+</ul>
+</div>
+
+
+  <div class="pull-right">
+    <div class="row" align="center">
+      <%= button_to "Download Brochure", brochure_path(format: :pdf),class: "btn btn-md btn-primary btn-block", method: "get"%> <br>
+      <%= button_to " Download Paper Template", paper_template_path ,class: "btn btn-md btn-primary btn-block", method: "get" %> <br>
+      <%= button_to "Publications List", publications_path,class: "btn btn-md btn-primary btn-block", method: "get" %> <br>
+      <%= button_to "Download Schedule", schedule_path,class: "btn btn-md btn-primary btn-block", method: "get" %> <br>
+      <%= button_to "Conference Proceedings", "#" ,class: "btn btn-md btn-primary btn-block", method: "get" %><br>
+      <%= button_to "Published links", "#" ,class: "btn btn-md btn-primary btn-block", method: "get" %>
+    </div>
+  </div>
+</div>
+
+<style>
+
+  .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 16px;
+  }
+  
+  .btn-lg {
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+  }
+  .btn-md {
+    font-size: 12px;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active,
+  .btn-primary.active,
+  .open .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+  }
+
+/***********************
+  RAISED BUTTONS
+  ************************/
+  .btn-primary.raised {
+    box-shadow: 0 3px 0 0 #007299;
+  }
+  .btn-primary.raised:active, .btn-primary.raised.active {
+    background: #33a6cc;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+  }
+
+/***********************
+  CUSTON BTN VALUES
+  ************************/
+
+  .btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+  }
+
+  .btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+  }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+  }
+  .btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+  }
+</style>
+<!--   <input type="radio" name="radio-btn" id="img-4" />
+  <li class="slide-container">
+    <div class="slide">
+      <img src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" />
+    </div>
+    <div class="nav">
+      <label for="img-3" class="prev">&#x2039;</label>
+      <label for="img-5" class="next">&#x203a;</label>
+    </div>
+  </li>
+
+  <input type="radio" name="radio-btn" id="img-5" />
+  <li class="slide-container">
+    <div class="slide">
+      <img src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" />
+    </div>
+    <div class="nav">
+      <label for="img-4" class="prev">&#x2039;</label>
+      <label for="img-6" class="next">&#x203a;</label>
+    </div>
+  </li>
+
+  <input type="radio" name="radio-btn" id="img-6" />
+  <li class="slide-container">
+    <div class="slide">
+      <img src="http://farm9.staticflickr.com/8195/8098750703_797e102da2_z.jpg" />
+    </div>
+    <div class="nav">
+      <label for="img-5" class="prev">&#x2039;</label>
+      <label for="img-1" class="next">&#x203a;</label>
+    </div>
+  </li> -->
+
+
+
+  <section id="about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center">About The College</h2>
+          <p class="text-justify" style="font-size:15px">
+            St.Joseph’s Institute of  Technology, a St.Joseph’s group of Institutions  started  in  the  year  2011.It is a  Christian  Minority  Institution   with   six  streams  viz CSE,  EEE, ECE,   IT , MECH & CIVIL.
+            The college has best infrastructure spread across 4 lakhs sq.ft with well equipped laboratories, workshops   and   classrooms.
+            A    state   of    the   art   infrastructure   including  auditorium, mess  halls, administrative  block   covering  an area of  10 lakhs sq.ft.  is upcoming.
+            Our  college  as  one  of  the  leading  engineering colleges,  focuses  on  inculcating   not  only   knowledge but  also   good   ethics   to   the  budding  engineers   of  future    India.
+            This   proves   to be the uniqueness   of St. Joseph’s Institute of Technology.
+          </p>
+          <h2 class="text-center">Conference Theme</h2>
+          <p class="text-justify" style="font-size:15px">
+            Second International Conference on Recent Trends in Engineering and Technology is being
+            organized by the various departments of St. Joseph’s Institute of Technology. The primary
+            goal of the conference is to promote research and developmental activities in the recent trends
+            in engineering and technology. It also helps to unite the great minds who believe in the need,
+            for a technologically literate society. This conference on the recent trends in engineering and
+            technology promises enormous potential to stimulate educational opportunities to the
+            researchers, academicians and post graduate students. It is a powerful tool for the educators to
+            interact with their peers, share knowledge and ideas. It also offers innovative technical
+            resources to support professional learning for educators and education leaders. The one day
+            conference comprises of keynote speeches and paper presentations in different sessions. It
+            also provides the participants with the prospect of getting acquainted with the Recent Trends
+            in Engineering and Technology, which helps in updating their knowledge thereby upgrading
+            their organization and the overall Computer Society.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="padding-top: 30px;">
+      <div class="col-md-18"></div>
+      <div class="col-md-8" style="text-align: center;">
+        <%= button_to "Download Brochure", brochure_path(format: :pdf),class: "btn btn-primary", method: "get"%> 
+      </div>
+      <div class="col-md-14" style=" text-align: center;">
+        <%= button_to "Download Schedule", schedule_path(format: :pdf),class: "btn btn-primary", method: "get" %>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section id="tiles">
+    <div class="container">
+      <div class="col-md-12" style="text-align: center;">
+       <center>   <h3>In Association with</h3></center>
+     </div>
+     <div class="row" style="padding-top: 100px; padding-bottom: 100px;">
+
+      <div class=col-md-6 style="text-align: center;">
+        <%= link_to image_tag("csi.png",alt: "CSI",height: 100, width: 100), "http://www.csi-india.org" %>
+<!--       <h5>
+        Computer Society Of India
+      </h5> -->
+    </div>
+
+    <div class=col-md-3 >
+      <%= link_to image_tag("IETElogo.jpg",alt: "IETE",height: 100, width: 100), "http://ieee.org/"%>
+<!--       <h5>
+        Institute of Electrical and Electronics Engineers
+      </h5> -->
+    </div>
+    <div class=col-md-3 >
+      <%= link_to image_tag("sae.jpg",alt: "IEEE",height: 100, width: 150), "http://ieee.org/"%>
+
+    </div>
+<!-- 
+                  <div class=col-md-3>
+                  <%= link_to image_tag("IETElogo.jpg",alt: "IETE",height: 40, width: 40), "http://iete.org/"%><br><br><br>
+                  <h5>
+                    Institute of Electrical and Electronics Engineers
+                  </h5>
+                </div> -->
+              </div>
+            </div>
+          </section><!--/#recent-works-->
+

@@ -1,0 +1,540 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ 
+ *= require "ticker.css"
+ *= require magnific-popup
+ *= require_self
+ */
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "bootstrap-table";
+ @import "font-awesome";
+ 
+ // @import "compass";
+ 
+//  $gray: #dddddd;
+
+//  .marquee {
+//   width: 450px;
+//   margin: 0 auto;
+//   overflow: hidden;
+//   white-space: nowrap;
+//   box-sizing: border-box;
+//   animation: marquee 50s linear infinite;
+// }
+
+// .marquee:hover {
+//   animation-play-state: paused
+// }
+
+//   /* Make it move */
+//   @keyframes marquee {
+//     0%   { text-indent: 27.5em }
+//     100% { text-indent: -105em }
+//   }
+
+//   /* Make it pretty */
+//   .microsoft {
+//     padding-left: 1.5em;
+//     position: relative;
+//     font: 16px 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+//   }
+
+//   /* ::before was :before before ::before was ::before - kthx */
+//   // .microsoft:before, .microsoft::before {
+//   //   z-index: 2;
+//   //   content: '';
+//   //   position: absolute;
+//   //   top: -1em; left: -1em;
+//   //   width: .5em; height: .5em;
+//   //   box-shadow: 1.0em 1.25em 0 #F65314,
+//   //   1.6em 1.25em 0 #7CBB00,
+//   //   1.0em 1.85em 0 #00A1F1,
+//   //   1.6em 1.85em 0 #FFBB00;
+//   // }
+
+//   .microsoft:after, .microsoft::after {
+//     z-index: 1;
+//     content: '';
+//     position: absolute;
+//     top: 0; left: 0;
+//     width: 2em; height: 2em;
+//     background-image: linear-gradient(90deg, white 70%, rgba(255,255,255,0));
+//   }
+
+//   /* Style the links */
+//   .vanity {
+//     color: #333;
+//     text-align: center;
+//     font: .75em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+//   }
+
+//   .vanity a, .microsoft a {
+//     color: #1570A6;
+//     transition: color .5s;
+//     text-decoration: none;
+//   }
+
+//   .vanity a:hover, .microsoft a:hover {
+//     color: #F65314;
+//   }
+
+//   /* Style toggle button */
+//   .toggle {
+//     display: block;
+//     margin: 2em auto;
+//   }
+
+//   h1, h2, h3 {
+//    font-weight: 300;
+//  }
+
+//  .container {
+//    padding: 1em;
+//  }
+//  .bbb .field  {
+//   color:white;
+// }
+// .timeline {
+//  position: relative;
+//  overflow: auto;
+
+//  &:before {
+//    content: '';
+//    position: absolute;
+//    height: 100%;
+//    width: 5px;
+//    background: $gray;
+//    left: 0;
+//  }
+
+//  h2 {
+//    background: $gray;
+//    max-width: 6em;
+//    margin: 0 auto 1em;
+//    padding: 0.5em;
+//    text-align: center;
+//    position: relative;
+//    clear: both;
+//  }
+
+//  ul {
+//    list-style: none;
+//    padding: 0 0 0 1em;
+//    z-index: 1;
+//  }
+
+//  li {
+//    background: $gray;
+//    padding: 1em;
+//    margin-bottom: 1em;
+//    position: relative;
+
+//    &:before {
+//      content: '';
+//      width: 0;
+//      height: 0;
+//      border-top: 1em solid $gray;
+//      border-left: 1em solid transparent;
+//      position: absolute;
+//      left: -1em;
+//      top: 0;
+//    }
+//  }
+
+//  h3 {
+//    margin-top: 0;
+//  }
+
+//  time {
+//    font-style: italic;
+//  }
+// }
+
+// @media screen and (min-width: 40em) {
+//  .container {
+//    max-width: 1000px;
+//    margin: 0 auto;
+//  }
+
+//  .timeline {
+//    &:before {
+//      left: 50%;
+//    }
+
+//    ul {
+//      padding-left: 0;
+//      max-width: 700px;
+//      margin: 0 auto;
+//    }
+
+//    li {
+//      width: 42%;
+//    }
+
+//    li:nth-child(even) {
+//      float: right;
+//      margin-top: 2em;
+//    }
+
+//    li:nth-child(odd) {
+//      float: left;
+
+//      &:before {
+//        border-top: 1em solid $gray;
+//        border-right: 1em solid transparent;
+//        right: -1em;
+//        left: auto;
+//      }
+//    }
+
+//    li:nth-of-type(2n+1) {
+//      clear: both;
+//    }
+//  }
+// }
+
+//  /*flash*/
+//  .alert-error {
+//    background-color: #f2dede;
+//    border-color: #eed3d7;
+//    color: #b94a48;
+//    text-align: left;
+//  }
+
+//  .alert-alert {
+//    background-color: #f2dede;
+//    border-color: #eed3d7;
+//    color: #b94a48;
+//    text-align: left;
+//  }
+
+//  .alert-success {
+//    background-color: #dff0d8;
+//    border-color: #d6e9c6;
+//    color: #468847;
+//    text-align: left;
+//  }
+
+//  .alert-notice {
+//    background-color: #dff0d8;
+//    border-color: #d6e9c6;
+//    color: #468847;
+//    text-align: left;
+//  }
+//  header{
+//      // Animation
+//      -webkit-transition: all 1s ease;
+//      transition: all 1s ease;
+//    }
+
+//    .outer{
+//     position: relative;
+//     bottom: -260px;
+//     right: 180px;
+//     z-index: 2;
+//     float: right;
+
+//   }
+
+//   .outer1{
+//     position: relative;
+//     bottom: -220px;
+//     right: 180px;
+//     z-index: 2;
+//     float: right;
+
+//   }
+
+//   .inner{
+//     position: fixed;
+//   }
+//   .inner1{
+//     position: fixed;
+//   }
+//   .ontop {
+//     z-index: 999;
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     display: none;
+//     position: absolute;
+//     background-color: #cccccc;
+//     color: #aaaaaa;
+//     opacity: .4;
+//     filter: alpha(opacity = 50);
+//   }
+//   #popup {
+//     width: 300px;
+//     height: 200px;
+//     position: absolute;
+//     color: #000000;
+//     background-color: #ffffff;
+//   /* To align popup window at the center of screen*/
+//   top: 50%;
+//   left: 50%;
+//   margin-top: -100px;
+//   margin-left: -150px;
+// }
+// /* Styles for dialog window */
+// #small-dialog {
+// 	background: white;
+// 	padding: 20px 30px;
+// 	text-align: left;
+// 	max-width: 1000px;
+// 	margin: 40px auto;
+// 	position: relative;
+// }
+
+
+// /**
+//  * Fade-zoom animation for first dialog
+//  */
+
+// /* start state */
+// .my-mfp-zoom-in .zoom-anim-dialog {
+// 	opacity: 0;
+
+// 	-webkit-transition: all 0.2s ease-in-out;
+// 	-moz-transition: all 0.2s ease-in-out;
+// 	-o-transition: all 0.2s ease-in-out;
+// 	transition: all 0.2s ease-in-out;
+
+
+
+// 	-webkit-transform: scale(0.8);
+// 	-moz-transform: scale(0.8);
+// 	-ms-transform: scale(0.8);
+// 	-o-transform: scale(0.8);
+// 	transform: scale(0.8);
+// }
+
+// /* animate in */
+// .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+// 	opacity: 1;
+
+// 	-webkit-transform: scale(1);
+// 	-moz-transform: scale(1);
+// 	-ms-transform: scale(1);
+// 	-o-transform: scale(1);
+// 	transform: scale(1);
+// }
+
+// /* animate out */
+// .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+// 	-webkit-transform: scale(0.8);
+// 	-moz-transform: scale(0.8);
+// 	-ms-transform: scale(0.8);
+// 	-o-transform: scale(0.8);
+// 	transform: scale(0.8);
+
+// 	opacity: 0;
+// }
+
+// /* Dark overlay, start state */
+// .my-mfp-zoom-in.mfp-bg {
+// 	opacity: 0;
+// 	-webkit-transition: opacity 0.3s ease-out;
+// 	-moz-transition: opacity 0.3s ease-out;
+// 	-o-transition: opacity 0.3s ease-out;
+// 	transition: opacity 0.3s ease-out;
+// }
+// /* animate in */
+// .my-mfp-zoom-in.mfp-ready.mfp-bg {
+// 	opacity: 0.8;
+// }
+// /* animate out */
+// .my-mfp-zoom-in.mfp-removing.mfp-bg {
+// 	opacity: 0;
+// }
+
+
+
+// /**
+//  * Fade-move animation for second dialog
+//  */
+
+// /* at start */
+// .my-mfp-slide-bottom .zoom-anim-dialog {
+// 	opacity: 0;
+// 	-webkit-transition: all 0.2s ease-out;
+// 	-moz-transition: all 0.2s ease-out;
+// 	-o-transition: all 0.2s ease-out;
+// 	transition: all 0.2s ease-out;
+
+// 	-webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+// 	-moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+// 	-ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+// 	-o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+// 	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+
+// }
+
+// /* animate in */
+// .my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+// 	opacity: 1;
+// 	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+// 	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+// 	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+// 	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+// 	transform: translateY(0) perspective( 600px ) rotateX( 0 );
+// }
+
+// /* animate out */
+// .my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+// 	opacity: 0;
+
+// 	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+// 	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+// 	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+// 	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+// 	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+// }
+
+// /* Dark overlay, start state */
+// .my-mfp-slide-bottom.mfp-bg {
+// 	opacity: 0;
+
+// 	-webkit-transition: opacity 0.3s ease-out;
+// 	-moz-transition: opacity 0.3s ease-out;
+// 	-o-transition: opacity 0.3s ease-out;
+// 	transition: opacity 0.3s ease-out;
+// }
+// /* animate in */
+// .my-mfp-slide-bottom.mfp-ready.mfp-bg {
+// 	opacity: 0.8;
+// }
+// /* animate out */
+// .my-mfp-slide-bottom.mfp-removing.mfp-bg {
+// 	opacity: 0;
+// }
+
+
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+// html, body { background: #333 url("http://codepen.io/images/classy_fabric.png"); }
+
+.slides {
+	padding: 0;
+	width: 800px;
+	height: 400px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+
+.slides * {
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+	top: 0;
+	opacity: 0;
+	width: 800px;
+	height: 400px;
+	display: block;
+	position: absolute;
+
+	transform: scale(0);
+
+	transition: all .7s ease-in-out;
+	
+}
+
+.slide img {
+	width: 100%;
+	height: 100%;
+}
+
+.nav label {
+	width: 50px;
+	height: 100%;
+	display: none;
+	position: absolute;
+
+	opacity: 0;
+	z-index: 9;
+	cursor: pointer;
+
+	transition: opacity .2s;
+
+	color: #FFF;
+	font-size: 50pt;
+	text-align: center;
+	line-height: 400px;
+	font-family: "Varela Round", sans-serif;
+	background-color: rgba(255, 255, 255, .3);
+	text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+	opacity: 1;
+
+	transform: scale(1);
+
+	transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 7px;
+	height: 7px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+	background: rgba(0, 0, 0, 0.8);
+}

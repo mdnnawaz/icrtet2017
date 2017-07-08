@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+  </head>
+  <body onload='number_pages'>
+    <div id="header" >
+      <center>
+        <br>
+      <%= wicked_pdf_image_tag 'sjit.png' %>
+
+      <h2>
+          International Conference in Recent Trends and Engineering Technology
+      </h2>
+      <h4>Organized by</h4>
+      <h2>
+          St.Joseph's Institue of Technology
+      </h2>
+<p> Your payment details is recieved successfully. <%= current_user.payment_detail.dd_number%>
+    </center>
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
+  </body>
+</html>

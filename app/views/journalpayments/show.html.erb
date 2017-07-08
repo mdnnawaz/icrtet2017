@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Journal:</strong>
+  <%= @journalpayment.journal %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @journalpayment.amount %>
+</p>
+
+<p>
+  <strong>Ispaid:</strong>
+  <%= @journalpayment.isPaid %>
+</p>
+
+<%= link_to 'Edit', edit_journalpayment_path(@journalpayment) %> |
+<%= link_to 'Back', journalpayments_path %>

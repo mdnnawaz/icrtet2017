@@ -1,0 +1,61 @@
+<!-- <h2 class="center">Journal Registration:<br>
+<h4 class="center">Select the type of journal(Optional)</h4>
+</h2>
+<div class="container">
+  <div class="col-md-12">
+<%= form_for(@journal) do |f| %>
+  <% if @journal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@journal.errors.count, "error") %> prohibited this journal from being saved:</h2>
+
+      <ul>
+      <% @journal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.check_box :annexure_1 %>
+    <%= f.label :annexure_1, "Updated  Annexure - I (Journal name will be informed latter based on scope of paper)" %>
+  </div>
+  <h4>Annexure-II<br></h4>
+  <div class="field">
+    <%= f.check_box :mejsr %>
+    <%= f.label :mejsr, "14368 Middle East Journal of Scientific Research 1990-9233 (Rs. 4500/-)" %>
+  </div>
+  <div class="field">
+    <%= f.check_box :wasj %>
+    <%= f.label :wasj, "20400 World Applied Sciences Journal 1818-4952 (Rs. 4500/-)" %>
+  </div>
+  <div class="field">
+    <%= f.check_box :anas %>
+    <%= f.label :anas, "559 Advances in Natural and Applied Sciences 1995-0772 (Rs. 4500/-)" %>
+  </div>
+  <h4>Other journal<br></h4>
+  <div class="field">
+    <%= f.check_box :ijecs%>
+    <%= f.label :ijecs,"International Journal of Engineering and Computer Science (Rs. 1600/-) (Google and DOI Indexed)"  %>
+  </div>
+  <div class="field">
+    <%= f.check_box :ijraset%>
+    <%= f.label :ijraset,"International Journal for Research in Applied Science and Engineering Technology (IJRASET) (Rs. 1200/-) (Google and DOI Indexed)"  %>
+  </div>
+  <div class="field">
+    <%= f.check_box :others%>
+    <%= f.label :others,"International Journal of Advanced Research in Biology, Engineering, Science and Technology(2395-695X) (Rs. 350/-) (Doi indexed only)"  %>
+  </div>
+      <% if ! @payment_details %>
+        <b>Journal Selection can be done only after registering for the event.<br><br></b>
+      <%else%>
+
+      <div class="actions">
+        <%= f.submit :Submit, class: "btn btn-success" %>
+      <% end %>
+
+  </div>
+</div>
+</div>
+<% end %>
+ -->

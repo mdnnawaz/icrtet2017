@@ -1,0 +1,31 @@
+<%= form_for(journalpayment, html: { multipart: true }) do |f| %>
+<% if journalpayment.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(journalpayment.errors.count, "error") %> prohibited this journal from being processed:</h2>
+
+  <ul>
+    <% journalpayment.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="container">
+  <!-- <select class="form-control"> -->
+  <%= f.label "Select The journal you wish to publish", class: 'col-md-4' %><br>
+  <%= f.select :journal, ['Scopus Indexed Journal','Google Indexed Journal'], { :include_blank => true }, {class: 'form-control'} %>
+  <!-- </select> -->
+  <br><br>
+  <h5>Upload your paper in IEEE template in doc/docx format.</h5>
+  <div class="field">
+    <%= f.label "Upload your accepted paper" %><br>
+    <%= f.file_field :paper, class: "form-control" %>
+  </div>
+  <br><br>
+
+  <div class="actions">
+    <%= f.submit "Submit", class: "btn btn-success" %>
+  </div>
+</div>
+<br>
+<% end %>

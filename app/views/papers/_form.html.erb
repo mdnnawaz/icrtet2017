@@ -1,0 +1,48 @@
+<%= form_for(@paper) do |f| %>
+<% if @paper.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@paper.errors.count, "error") %> prohibited this paper from being saved:</h2>
+
+  <ul>
+    <% @paper.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="field">
+  <%= f.label :paper_tile, "Paper Title" %><br>
+  <%= f.text_field :paper_tile, class: "form-control"%>
+</div>
+<div class="field">
+  <%= f.label :author1, "Author 1" %><br>
+  <%= f.text_field :author1, class: "form-control" %>
+</div>
+<div class="field">
+  <%= f.label :author2, "Author 2" %><br>
+  <%= f.text_field :author2, class: "form-control" %>
+</div>
+<div class="field">
+  <%= f.label :author3, "Author 3" %><br>
+  <%= f.text_field :author3, class: "form-control" %>
+</div>
+<div class="field">
+  <%= f.label :author4, "Author 4" %><br>
+  <%= f.text_field :author4, class: "form-control" %>
+</div>
+<div class="field">
+  <%= f.label :abstract %><br>
+  <%= f.text_area :abstract, size: '50x20', class: "form-control" %>
+</div>
+<div class="field">
+  <%= f.label :type_of_conference %><br>
+  <%= f.select :type_of_conference, options_for_select([['  CSE  '],['  IT  '],['  ECE  '],['  MECH  '],['  EEE  '],['  MATHS  '],['  CIVIL  ']]), class: "form-control" %>
+</div>
+<div class="field">
+ <%= f.label "Full Paper" %><br>
+ <%= f.file_field :paper_version1, class: "form-control" %>
+</div>
+<div class="actions">
+  <%= f.submit "Submit", class: "btn btn-success" %>
+</div>
+<% end %>

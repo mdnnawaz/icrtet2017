@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  annexure_1: false
+  annexure_2: false
+  others: false
+  user_id: 
+
+two:
+  annexure_1: false
+  annexure_2: false
+  others: false
+  user_id: 

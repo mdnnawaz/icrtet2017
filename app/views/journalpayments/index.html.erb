@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<div class="container" style="padding-bottom: 100px;">
+<h1>Journalpayments</h1>
+
+<div class="table table-hover table-bordered ">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Journal</th>
+        <th>Amount</th>
+        <th>Ispaid</th>
+        <!-- <th colspan="3"></th> -->
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @journalpayments.each do |journalpayment| %>
+      <% if journalpayment.user_id == current_user.id %>
+      <tr>
+        <td><%= journalpayment.journal %></td>
+        <td><%= journalpayment.amount %></td>
+        <td><% if journalpayment.isPaid == true %>
+              <h5><strong>PAID</strong></h5>
+              <% elsif journalpayment.isPaid == false %>
+              <h5><strong>NOT PAID</strong></h5>
+              <% end %>
+        </td>
+      </tr>
+      <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+
+  <br>
+  <% if @journals.isPaid == false %>
+  <%= link_to 'Make payment', techprocess_payment_path, class: "btn btn-success" %>
+  <% end %>
+  <br><br>
+</div>

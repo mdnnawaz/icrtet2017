@@ -1,0 +1,44 @@
+
+<%= form_for(@payment_detail) do |f| %>
+<% if @payment_detail.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@payment_detail.errors.count, "error") %> prohibited this payment_detail from being saved:</h2>
+
+  <ul>
+    <% @payment_detail.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<br>
+<b>No. of Participants:-</b><br>
+<div class="field row">
+  <%= f.label :staff,"Faculty/\nDelegates/\nResearch Scholars" , class: 'col-md-4'%>
+  <%= f.text_field :staff,class: "form-control col-md-2", id: 'staffs', onchange: 'updateStaff();',width: "20" %><div class="col-md-4"> X 1500 = </div><div id="sta" clas="col-md-2">Rs.0</div>
+</div>
+<div class="field row">
+  <%= f.label :students,"Students", class: 'col-md-4' %>
+  <%= f.text_field :students,class: "form-control col-md-2", id: 'students', onchange: 'updateStud();', width: "20" %><div class="col-md-4">X 1000 =</div><div id="stud" class="col-md-2">Rs.0</div>
+</div>
+<div class="field row">
+  <%= f.label :cert,"Co-Author Certificate fee", class: 'col-md-4' %>
+  <%= f.text_field :cert,class: "form-control col-md-2", id: 'certs', onchange: 'updateCert();', width: "20" %><div class="col-md-4">X 250 =</div><div id="ce" class="col-md-2">Rs.0</div>
+</div>
+<div class="field">
+  <%= f.label "Select The journal you wish to publish(Publication cost extra)" %><br>
+  <%= f.select :journal, ['None','Annexure-I(SCI indexed)','Annexure-II(SCOPUS indexed)','International Journal (Google Indexed only)'], class: "form-control" %>
+</div>
+
+<p>Total Amount to be Paid:<div id="total">Rs. 0</div></p>
+
+<div class="center">
+  <div class="field">
+    <%= f.check_box :accept %>
+    <%= f.label :accept, "I hereby accept to attend the event on the mentioned date."%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit", class: "btn btn-success"%>
+  </div>
+</div>
+<% end %>

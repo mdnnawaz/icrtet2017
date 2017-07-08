@@ -1,0 +1,197 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>ICRTET2017</title>
+    <meta charset='utf-8' />
+
+    <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+    <style type="text/css">
+        body { widows:0; orphans:0; font-family:'Liberation Serif'; font-size:12pt }
+        h2, p { margin:0pt }
+        li { margin-top:0pt; margin-bottom:0pt }
+        h2 { margin-top:10pt; margin-left:0pt; margin-bottom:6pt; text-indent:0pt; page-break-after:avoid; widows:0; orphans:0; font-family:'Liberation Serif'; font-size:18pt; font-weight:bold; color:#000000 }
+        .Caption { margin-top:6pt; margin-bottom:6pt; widows:0; orphans:0; font-family:'Liberation Serif'; font-size:12pt; font-style:italic; color:#000000 }
+        .Heading { margin-top:12pt; margin-bottom:6pt; page-break-after:avoid; widows:0; orphans:0; font-family:'Liberation Sans'; font-size:14pt; color:#000000 }
+        .Index { widows:0; orphans:0; font-family:'Liberation Serif'; font-size:12pt; color:#000000 }
+        .List { margin-top:0pt; margin-bottom:7pt; line-height:120%; widows:0; orphans:0; font-family:'Liberation Serif'; font-size:12pt; color:#000000 }
+        .Standard { widows:0; orphans:0; font-family:'Liberation Serif'; font-size:12pt; color:#000000 }
+        .BodyText { margin-top:0pt; margin-bottom:7pt; line-height:120%; widows:0; orphans:0; font-family:'Liberation Serif'; font-size:12pt; color:#000000 }
+        .Textbody { margin-top:0pt; margin-bottom:7pt; line-height:120%; widows:0; orphans:0; font-family:'Liberation Serif'; font-size:12pt; color:#000000 }
+        span.BulletSymbols { font-family:OpenSymbol }
+    </style>
+</head>
+<body style="background:#ffffff">
+    <div>
+        <p class="Standard" style="text-align:center; font-size:14pt">
+            <%= wicked_pdf_image_tag "icrtet17.png", style: "height:104px; width: 104px;" %>
+
+            <h2><center><strong>St. Joseph's Institute of Technology</strong></center></h2>
+        </p>
+        <h2 style="text-align:center; font-size:14pt">
+            <span style="font-weight:normal">&#xa0;</span>
+        </h2>
+        <h2 style="text-align:center; font-size:14pt">
+            2<span style="font-size:9.33pt; "><sup>nd</sup></span> International Conference on Recent Trends in Engineering and Technology
+        </h2>
+        <p class="Textbody" style="text-align:center">
+            <strong>Paper Evaluation Form</strong>
+        </p>
+        <p class="Standard" style="font-size:14pt">
+            <% if @user.id == @paper.user_id %>
+             <span style="font-size:12pt">Paper Id:  <u><%= @paper.new_paper_version2_file_name %></u></span>                       <span style="font-size:12pt">Department: <u><%= @paper.type_of_conference %></u></span>
+        </p>
+        <p class="Standard" style="font-size:14pt">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            Manuscript Title:   <u><%= @paper.paper_tile %></u>
+        </p>
+        <%end%>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            Reviewer's Name: __________________________________________________________________________
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            <strong><em>PART 1: Please indicate your assessment of each criterion by ranking between 1-5 (5 Being the Highest)</em></strong>
+        </p>
+        <p class="Standard">
+            <strong><em>&#xa0;</em></strong>
+        </p>
+        <p class="Standard">
+            The problem being studied is significant. It is applicable and of interest to the <div align="right"> ___________</div> field.                        
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            The title reflects the content of the paper. It is short and interesting.   <div align="right"> ___________</div>
+                                                             
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            The abstract is short and informative enough to stand on its own. Appropriate generic moves and steps have been employed (i.e., correct genre).      
+            <div align="right"> ___________</div>
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+        The introduction of the paper describes the problem within a theoretical framework. It clearly establishes a niche, identifies a gap, and occupies the gap.     <div align="right"> ___________</div>
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            The Literature review section of the paper demonstrates a clear relationship to the problem.Enough literature has been provided. The sources cited are original, authoritative, importantand recent. There is no plagiarism in this section.                          <div align="right"> ___________</div>
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            The paper explores an issue in depth.                                                 <div align="right"> ___________</div>
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            Appropriate research design/method has been used. Procedures have all been described appropriately. The reliability and validity of the data have been demonstrated.  <div align="right"> ___________</div>        
+        </p> 
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            Accurate and useful interpretation has been made. Sound argument and discussion has been provided. Results have been reported. The study has been evaluated and compared to
+            similar studies (if any)  <div align="right">___________</div>
+        </p>
+        <p class="Standard">
+            &#xa0;
+            &#xa0;
+        </p>
+        <p class="Standard">
+            &#xa0;
+            &#xa0;
+        </p>
+        <p class="Standard">
+            Conclusion describes implications for theory, research, and/or practice. Logical conclusions from the data have be drawn.                                              <div align="right"> ___________</div>
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            The reference list follows alphabetical ordering. There is a one-to- one  correspondence between the cited and referenced works. There is no additional or incomplete reference.                                                                            <div align="right"> ___________</div>
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            The manuscript shows a complete, clear and well organized presentation. Section have been (sub)headed according to IJLS style sheet. The content is precise. The language of the paper
+            is formal, technical and academic.                                     <div align="right"> ___________</div>
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            The overall appearance, diction, and language of the manuscript looks natural. The paper is free from typographical and grammatical errors.                                       <div align="right"> ___________</div>
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            On the whole, this manuscript is an academic scholarly work. The manuscript enjoys scientific quality and scholarly standing.   <div align="right"> ___________</div>
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            Dear Reviewer
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            It is strongly recommended that you activate the 'Track Changes' option and also use the 'New Comment' button from the 'Review' menu of Microsoft Word and insert your points and comments in the manuscript itself. If the article is poorly written due to grammatical errors, while it may make it more difficult to understand the science, you do not need to correct the English. You may wish to bring it to the attention of the editor, though. It is also helpful to provide a quick summary of the article in the body of your e-mail message to which you attach this form. It serves the dual purpose of reminding the editor of the details of the report and also reassuring the author and editor that you understood the article. The body of your e-mail may also contain the key elements of your review. Your commentary should be courteous and constructive, and should not include any personal remarks or personal details including your name. Providing insight into any deficiencies is important. You should explain and support your judgment so that both editors and authors are better able to understand the basis of your comments. You should indicate whether your comments are your own opinion or reflected by data.
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            <strong>YOUR FINAL RECOMMENDATION:</strong>
+        </p>
+        <p class="Standard">
+            <strong>&#xa0;</strong>
+        </p>
+        <p class="Standard">
+            □   Accept, no revision needed
+        </p>
+        <p class="Standard">
+            □   Accept, but needs minor revision
+        </p>
+        <p class="Standard">
+            □  Reject, poor quality/out of scope
+        </p>
+        <p class="Standard">
+            □  Reject, ethical issues
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            Reviewer's Name:           _____________________________________________________________________
+        </p>
+        <p class="Standard">
+            &#xa0;
+        </p>
+        <p class="Standard">
+            Reviewer's Signature:     _____________________________________________________________________
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paper_tile: MyString
+  abstract: MyText
+  type_of_conference: MyString
+
+two:
+  paper_tile: MyString
+  abstract: MyText
+  type_of_conference: MyString

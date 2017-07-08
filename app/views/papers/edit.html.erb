@@ -1,0 +1,24 @@
+<div class = "container">
+	<h1>Edited Paper/Camera Ready Paper.</h1>
+	<div class="col-md-4"></div>
+	<div class="col-md-4 text-center">
+		<%= form_for(@paper) do |f| %>
+		<% if @payuser.nil?  || @payuser.isPaid == false %>
+		<div class="field">
+			<%= f.label "Edited Paper" %><br>
+			<%= f.file_field :paper_version2, class:"form-control" %>
+		</div>
+		<% elsif @payuser.isPaid == true %>
+		<h4 style="color: red;">Upload camera ready paper in doc,docx format only</h4>
+		<div class="field">
+		<%= f.label "Camera Ready Paper" %><br>
+			<%= f.file_field :camera_ready_paper, class:"form-control" %>
+		</div>
+		<% end %>
+		<div class="actions">
+			<%= f.submit "Add Paper",class: "btn btn-success" %>
+		</div>
+		<% end %>
+		<%= link_to 'Back', papers_path %>
+	</div>
+</div>

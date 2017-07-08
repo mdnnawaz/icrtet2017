@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Annexure 1:</strong>
+  <%= @journal.annexure_1 %>
+</p>
+
+<p>
+  <strong>Annexure 2:</strong>
+  <%= @journal.annexure_2 %>
+</p>
+
+<p>
+  <strong>Others:</strong>
+  <%= @journal.others %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @journal.user %>
+</p>
+
+<%= link_to 'Edit', edit_journal_path(@journal) %> |
+<%= link_to 'Back', journals_path %>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<HTML>
+	<script>
+			// var subFunc = function() {
+			// 	$document("sendpost").submit();
+			// };
+			// ($document).ready(subFunc);
+			// ($document).on('page:load', subFunc);
+			// ($document).on('turbolinks:load', subFunc);
+			// window.onload = function(){
+			// 	document.sendpost.submit();
+			// };
+
+			$(document).on('turbolinks:load', function() {
+
+				document.forms['sendpost'].submit()
+
+			});
+
+			// window.onload = function(){
+			// 	document.forms['sendpost'].submit()
+			// }
+
+
+		</script>
+
+<!-- event registration block start -->
+<!-- 		<body onload="sendPost();">
+
+			<div class="container" style="padding-bottom: 150px; padding-top: 100px" align="center">
+
+				<form id= "form" method="post" name="sendpost" action= < get the payUrl from db >
+				<h4>Please wait you will be redirected ....</h4>
+
+				</form>
+			</div>
+
+		</body> -->
+<!-- Event registration block end -->
+
+
+<!-- Journal payment block start -->
+
+		<body onload="sendPost();">
+
+			<div class="container" style="padding-bottom: 150px; padding-top: 100px" align="center">
+
+				<form id= "form" method="post" name="sendpost" action= <%= @currjournal.paylink %> >
+				<h4>Please wait you will be redirected ....</h4>
+					<!-- <input type="submit" value="Proceed to pay" class="btn btn-primary"> -->
+
+				</form>
+			</div>
+
+		</body>
+
+<!-- Journal payment block end -->
+	</HTML>
